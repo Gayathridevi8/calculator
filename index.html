@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link href='style.css' rel='stylesheet'>
+</head>
+<body>
+    <div class='main'>
+        <div class='Calculator'>
+            <input type='text' placeholder="0" id='output'>
+            <button type='btn' onclick="Clear()">C</button>
+            <button type='btn' onclick="Delete()">D</button>
+            <button type='btn' onclick="Display('*')">*</button>
+            <button type='btn' onclick="Display('/')">/</button>
+            <button type='btn' onclick="Display('+')">+</button>
+            <button type='btn' onclick="Display('-')">-</button>
+            <button type='btn' onclick="Display('.')">.</button>
+            <button type='btn' onclick="Display('0')">0</button>
+            <button type='btn' onclick="Display('1')">1</button>
+            <button type='btn' onclick="Display('2')">2</button>
+            <button type='btn' onclick="Display('3')">3</button>
+            <button type='btn' onclick="Display('4')">4</button>
+            <button type='btn' onclick="Display('5')">5</button>
+            <button type='btn' onclick="Display('6')">6</button>
+            <button type='btn' onclick="Display('7')">7</button>
+            <button type='btn' onclick="Display('8')">8</button>
+            <button type='btn' onclick="Display('9')">9</button>
+            <button type='btn' onclick="Display('00')">00</button>
+            <button type='btn' onclick="operate()" class="equal">=</button>
+            <script>
+                let output=document.getElementById('output');
+                function Display (num){
+                    output.value+=num;
+                }
+                function operate(){
+                    try{
+                        output.value=eval(output.value);
+                    }
+                    catch(error){
+                        alert('Invalid operation');
+                    }
+                }
+                function Delete(){
+                    output.value=output.value.slice(0,-1);
+                }
+                function Clear(){
+                   output.value="";
+                }
+            </script>
+            
+           
+            
+        </div>
+    </div>
+</body>
+</html>

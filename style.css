@@ -1,0 +1,72 @@
+*{
+    margin: 0; /* for not differentiating div and body*/
+    padding: 0;
+    box-sizing: border-box;
+   
+    
+    
+    
+   
+   
+    font-family: sans-serif;
+}
+.main{
+    background-color: black;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+}
+.Calculator{
+    background-color: paleturquoise;
+   /*  height: 100px;      Dont specify this to avoid  */
+    padding: 15px; /*yellow circle to buttons padding*/
+    border-radius: 30px; /*yellow circle*/
+    box-shadow: inset 5px 5px 12px grey,  /* top left       both for yellow circle*/
+                inset  -5px -5px 12px grey;  /* bottom right*/
+    display: grid;  
+    grid-template-columns: repeat(4,68px);  
+
+    
+}
+input{
+    grid-column: span 4;
+    height: 70px;
+    width: 260px;
+    background-color: powderblue;
+    box-shadow: inset 5px 5px 12px grey,
+                inset -5px -5px 12px grey;
+     
+    border-radius: 30px; 
+    color: gray;
+    font-size: 50px;  
+    text-align: end;
+    margin: auto; 
+    margin-top: 40px;
+    margin-bottom: 30px;  
+    padding: 20px;
+    border: solid 2px black;    
+}
+body{
+    background-color: violet;
+    
+}    
+button{
+    height: 50px;
+    width: 55px;
+    margin: 8px;
+    border-radius: 50%;
+    border: solid 2px black;
+     /* to avoid box shadow border*/
+    box-shadow: inset 3px 3px 12px paleturquoise,
+                inset -3px -3px 12px   paleturquoise;
+    background-color: grey;            
+    font-size: 20px;
+
+}
+.equal{
+    width: 115px;
+    border-radius: 15px;
+}
